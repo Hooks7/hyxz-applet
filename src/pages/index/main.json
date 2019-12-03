@@ -1,5 +1,6 @@
 {
     "usingComponents": {
-        "van-notice-bar": "/static/vant/notice-bar/index"
+        "van-notice-bar": "/static/vant/notice-bar/index",
+        "van-progress": "/static/vant/progress/index"
     }
 }
