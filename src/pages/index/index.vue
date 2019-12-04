@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <van-notice-bar
-      left-icon="https://img.yzcdn.cn/1.png"
-      text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。"
-    />
-
+  <div class="home">
+    <div class="title"></div>
+    <button open-type="getUserInfo" @getuserinfo="bindgetuserinfo">用户授权</button>
+    
     <mybr />
     <mybr />
     <van-notice-bar mode="closeable" text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。" />
@@ -23,8 +21,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    bindgetuserinfo(e) {
+      console.log(e);
+    }
+  }
+};
 </script>
 
-<style scoped>
+<style scoped lang='less'>
+.home {
+  background-color: antiquewhite;
+  .title {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+  }
+}
 </style>
