@@ -14,11 +14,11 @@ export default {
         if (message.data.succ === 0) {
         } else if (message.data.succ === 1) {
           console.log(1);
-          
-          wx.navigateTo({
-            url: "/pages/logs/main"
-          });
+
           if (message.data.user === null) {
+            wx.redirectTo({
+              url: "/pages/login/main"
+            });
             let Cookie = message.header["Set-Cookie"];
             mpvue.getUserInfo({
               success: async res => {
