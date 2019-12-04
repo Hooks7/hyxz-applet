@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="title"></div>
-    <button open-type="getUserInfo" @getuserinfo="bindgetuserinfo">用户授权</button>
+
     
     <mybr />
     <mybr />
@@ -21,13 +21,7 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    bindgetuserinfo(e) {
-      console.log(e);
-    }
-  }
-};
+
 </script>
 
 <style scoped lang='less'>
