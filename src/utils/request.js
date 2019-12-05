@@ -6,6 +6,8 @@ export default function (obj) {
     "content-type": "application/x-www-form-urlencoded",
     "Cookie": obj.header ? obj.header.Cookie : ''
   }
+ 
+  
 
 
   // 配置url

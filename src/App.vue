@@ -13,8 +13,6 @@ export default {
         // 判断
         if (message.data.succ === 0) {
         } else if (message.data.succ === 1) {
-          console.log(1);
-
           if (message.data.user === null) {
             wx.redirectTo({
               url: "/pages/login/main"
@@ -31,47 +29,6 @@ export default {
             });
           }
         }
-
-        // wx.request({
-        //   method: "post",
-        //   url: "https://hxauth.xiaoyansuo.cn/wxapp/login",
-        //   data: { code },
-        //   header: {
-        //     "content-type": "application/x-www-form-urlencoded"
-        //   },
-        //   success(res) {
-        //     console.log(res.header["Set-Cookie"]);
-        //     mpvue.setStorageSync(
-        //       "sessionId",
-        //       JSON.stringify(res.header["Set-Cookie"])
-        //     );
-
-        //     if (res.data.succ == 0) {
-        //     } else if (res.data.succ == 1) {
-        //       if (res.data.user == null) {
-        //         let SetCookie = res.header["Set-Cookie"];
-
-        //         wx.getUserInfo({
-        //           success: res => {
-        //             console.log(res);
-        //             wx.request({
-        //               method: "post",
-        //               url: "https://hxauth.xiaoyansuo.cn/wxapp/reg",
-        //               data: { encryptedData: res.encryptedData, iv: res.iv },
-        //               header: {
-        //                 "content-type": "application/x-www-form-urlencoded",
-        //                 Cookie: SetCookie
-        //               }
-        //             });
-        //             //  await request({
-
-        //             //  });
-        //           }
-        //         });
-        //       }
-        //     }
-        //   }
-        // });
       }
     });
   }
